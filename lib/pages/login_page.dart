@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   
@@ -7,7 +8,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.white,
-      child: Column(children: [
+      child: SingleChildScrollView(child: Column(children: [
         Image.asset("assets/images/login.png",fit: BoxFit.cover,),
       Padding(padding: const EdgeInsets.symmetric(vertical: 16 , horizontal: 32),
       child: Column(
@@ -22,12 +23,12 @@ class LoginPage extends StatelessWidget {
         ElevatedButton(
           child: Text("Login"),
           onPressed: () {
-            print("WelCome to port");
+            Navigator.pushNamed(context, MyRoutes.homeRoute);
           },
           )
         ],
       ),),
-      ],)
+      ],),)
     );
   }
 }
