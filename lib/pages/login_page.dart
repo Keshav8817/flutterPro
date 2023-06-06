@@ -11,9 +11,20 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   String name = "" ;
  bool changeButton = false ;
+
+ final _formKey = GlobalKey<FormState>();
+
+ moveToHome(BuildContext context)async {
+            setState(() {
+              changeButton = true ;
+            });
+            await Future.delayed(Duration(seconds: 1));
+              Navigator.pushNamed(context, MyRoutes.homeRoute);
+          }
   @override
   Widget build(BuildContext context) {
     return Material(
+      key: _formKey,
       color: Colors.white,
       child: SingleChildScrollView(child: Column(children: [
         Image.asset("assets/images/login.png",fit: BoxFit.cover,),
@@ -39,15 +50,9 @@ class _LoginPageState extends State<LoginPage> {
         ),
 
         InkWell(
-          onTap: () async {
-            setState(() {
-              changeButton = true ;
-            });
-            await Future.delayed(Duration(seconds: 1));
-              Navigator.pushNamed(context, MyRoutes.homeRoute);
-          },
+          onTap: () => moveToHome(context),
           child: AnimatedContainer(
-            duration: Duration(seconds: 1),
+           duration: Duration(seconds: 1),
             height: 50,
             width: changeButton? 50: 150,
             alignment: Alignment.center,

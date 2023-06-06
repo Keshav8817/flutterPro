@@ -1,0 +1,31 @@
+{
+    "PortItems" : [
+        {
+            "id": 1 ,
+            "name": "Port Dues" 
+        },
+        {
+            "id": 2 ,
+            "name": "Light Dues" 
+        },
+        {
+            "id": 3 ,
+            "name": "Marine Equipment" 
+        },{
+            "id": 4 ,
+            "name": "Vessel Traffic Services" 
+        },{
+            "id": 5 ,
+            "name": "Line Handling" 
+        },{
+            "id": 6 ,
+            "name": "Running Vessel Lines" 
+        },{
+            "id": 7 ,
+            "name": "Administrative Fees" 
+        },{
+            "id": 8 ,
+            "name": "Passenger Services" 
+        }
+    ]
+}
